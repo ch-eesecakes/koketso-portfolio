@@ -43,7 +43,7 @@ def photo_tag(photo, alt, loading='lazy'):
 
 cards = []
 work_order = [0, 5, 1, 2, 3, 4]
-for i in work_order:
+for display_number, i in enumerate(work_order, start=1):
     title, medium, note, description = data['works'][i]
     label = escape(title)
     gallery = [{**photos[name], 'alt': f'{title} — view {index+1}'} for index, name in enumerate(work_photos[i])]
@@ -52,7 +52,7 @@ for i in work_order:
     if len(gallery) > 1:
         thumbnails = '<div class="work-thumbnails" aria-label="Additional views">' + ''.join(f'<button type="button" data-work="{i}" data-photo-index="{index}" aria-label="View {label}, photo {index+1}">{photo_tag(photo, photo["alt"])}</button>' for index, photo in enumerate(gallery)) + '</div>'
     cards.append(f'''<article class="work-item {'portrait-work' if i % 2 == 0 else 'wide-work'}" id="work-{i+1}" data-photos="{escape(json.dumps(gallery), quote=True)}">
-      <button class="work-image artwork-button" data-work="{i}" aria-label="View {label} details">{picture}<span class="work-number">0{i+1}</span><span class="work-expand" aria-hidden="true">↗</span></button>
+      <button class="work-image artwork-button" data-work="{i}" aria-label="View {label} details">{picture}<span class="work-number">{display_number:02d}</span><span class="work-expand" aria-hidden="true">↗</span></button>
       {thumbnails}
       <div class="work-meta"><h2>{label}</h2><p>2026</p></div>
       <div class="artwork-description"><p class="medium"><strong>Medium:</strong> {escape(medium)}</p>{f'<p class="material-note">{escape(note)}</p>' if note else ''}{paragraphs(description)}</div>
@@ -70,7 +70,7 @@ html = f'''<!doctype html>
 <header class="site-header"><a class="wordmark" href="#home" aria-label="Koketso Masemola home">KM.</a><button class="menu-button" aria-expanded="false" aria-controls="navigation">Menu</button><nav class="nav" id="navigation" aria-label="Main navigation"><a href="#artworks">Artworks</a><a href="#archive">Archive</a><a href="#statement">Statement</a><a href="#catalogue">Catalogue</a><a href="#about">About</a><a href="#cv">CV</a><a href="#contact">Contact</a></nav></header>
 <main id="main">
 <section class="hero" id="home"><img src="{landing_image_url}" alt="A woman presenting the Becoming, in Layers exhibition, with a garment installation and textile artworks" width="2400" height="2355" fetchpriority="high"><div class="hero-shade"></div><div class="hero-title"><h1>Koketso<br>Masemola</h1><p class="hero-kicker">Multidisciplinary artist · South Africa</p><p><em>Becoming, in Layers</em><br>Fashion. Memory. Identity.</p></div><a class="hero-link" href="#artworks">View selected work <span aria-hidden="true">→</span></a></section>
-<section class="intro section-pad" id="introduction"><h2 class="eyebrow">Becoming, in Layers / 2026</h2><div class="intro-copy"><p>{prose(first_intro)}.</p><p class="intro-secondary">{prose(rest_intro)}</p><a class="text-link" href="#statement">Read artist statement <span aria-hidden="true">→</span></a></div></section>
+<section class="intro section-pad" id="introduction"><div class="intro-heading"><h2 class="eyebrow">Introduction</h2><p>Becoming, in Layers / 2026</p></div><div class="intro-copy"><p>{prose(first_intro)}.</p><p class="intro-secondary">{prose(rest_intro)}</p><a class="text-link" href="#statement">Read artist statement <span aria-hidden="true">→</span></a></div></section>
 <section class="work section-pad" id="artworks"><div class="section-heading"><h2 class="eyebrow">Selected artworks</h2><p>2026</p></div><div class="work-grid">{''.join(cards)}</div><a class="outline-link" href="#catalogue">Explore the catalogue <span aria-hidden="true">→</span></a></section>
 {(root / 'archive.html').read_text()}
 <section class="full-statement section-pad" id="statement"><h2 class="eyebrow">Artist statement</h2><blockquote>{prose(data['statement'][0])}</blockquote><div class="statement-columns">{paragraphs(data['statement'][1:])}</div></section>
