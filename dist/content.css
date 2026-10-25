@@ -1,0 +1,92 @@
+/* Adaptations to the supplied Artist Portfolio Website template. */
+.cv-profile{margin:0 0 55px 28%;max-width:760px}.cv-profile h3{font:400 clamp(36px,4vw,60px)/1.1 var(--serif);margin:0 0 18px}.cv-profile>p:last-child{font-size:13px;line-height:1.85;color:#59564f;margin-top:24px}.cv-entries{display:flex;flex-direction:column;gap:32px;min-width:0}.cv-entry{display:grid;grid-template-columns:115px minmax(0,1fr);gap:18px}.cv-entry h4,.cv-personal h4{font-size:13px;font-weight:500;margin:0 0 8px}.cv-entry p{display:block;grid-column:auto;margin:0 0 8px;font-size:12px;line-height:1.7}.cv-entry ul,.cv-personal ul,.cv-skills ul{margin:12px 0 0;padding-left:18px;font-size:12px;line-height:1.85;color:#59564f}.cv-entry li,.cv-personal li,.cv-skills li{margin-bottom:6px}.cv-entry .cv-status{font-size:10px;line-height:1.7}.cv-skills{display:grid;grid-template-columns:1fr 1fr;gap:25px}.cv-skills ul{margin-top:0}.cv-link{font-size:11px;text-decoration:underline;text-underline-offset:4px;overflow-wrap:anywhere}.cv-contact,.contact-details{font-style:normal;display:flex;flex-direction:column;align-items:flex-start;gap:14px;font-size:12px;overflow-wrap:anywhere;min-width:0}.cv-contact a,.contact-details a{max-width:100%;text-decoration:underline;text-underline-offset:4px}.cv-contact span,.contact-details span{color:#59564f}.footer-main{gap:35px}.contact-details{font-size:11px}.cv-group>h3{overflow-wrap:anywhere}@media(max-width:1050px){.cv-list,.cv-profile{margin-left:0}}@media(max-width:760px){.cv-profile{margin:0 0 40px}.cv-entry{grid-template-columns:1fr;gap:8px}.cv-skills{grid-template-columns:1fr;gap:0}.cv-skills ul+ul{margin-top:6px}.contact-details{margin-top:35px;font-size:11px}.cv-contact{font-size:11px}}
+.cv-status{color:var(--muted);font-size:10px}.cv-group p{line-height:1.7;grid-template-columns:80px 1fr}.cv .section-heading>p{font-size:10px;color:var(--muted)}
+html{scroll-padding-top:85px}body{line-height:1.6}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer;color:inherit}button:focus-visible,a:focus-visible{outline:2px solid var(--acid);outline-offset:6px}.skip{position:fixed;top:-100px;left:20px;z-index:100;background:var(--paper);color:var(--ink);padding:12px}.skip:focus{top:12px}.hero-title h1{font-weight:600;line-height:.86;font-size:clamp(80px,12vw,180px)}.hero-title p{margin-left:7%;font-size:clamp(22px,2.5vw,36px)}.hero-shade{background:linear-gradient(180deg,#120c0f40,#120c0f08 25%,#120c0f70 60%,#120c0fbd)}.hero>img{object-position:center 57%}.nav a{font-size:11px}.nav.is-open~*{color:var(--ink)}.site-header.menu-open{color:var(--ink)}.wordmark{font-weight:600}.intro-copy>p:first-child{font-size:clamp(32px,4.2vw,63px);line-height:1.12}.intro-secondary{margin-left:24%;font-size:14px}.artwork-button{display:block;width:100%;padding:0;border:0;text-align:left}.work-item .work-image img{object-fit:contain;background:#dcd7cc}.work-image .work-expand{left:auto;right:12px;background:var(--paper);font-size:17px}.work-item:nth-child(4){grid-column:8 / span 5;margin-top:100px}.work-item:nth-child(5){grid-column:2 / span 7}.work-meta{gap:15px}.work-meta p{white-space:normal}.artwork-description{margin-top:22px;max-width:650px;font-size:12px;color:#59564f;line-height:1.85}.artwork-description .medium{font-size:10px;line-height:1.7}.artwork-description .material-note{font-size:10px;font-style:italic;color:var(--muted)}.photo-pending{height:100%;min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px;background:#d9d4c9;color:#77746b}.photo-pending>span{position:static;width:auto;height:auto;border-radius:0;background:transparent;font:400 100px/1 var(--serif);color:#a6a090}.photo-pending p{font-size:9px;letter-spacing:.08em;text-transform:uppercase;text-align:center;margin:20px 0 12px}.photo-pending em{font:400 26px/1.2 var(--serif);text-align:center}.work-item:nth-child(2) .photo-pending{background:#e4c6d0}.work-item:nth-child(4) .photo-pending{background:#c7ceb9}.full-statement blockquote{font-size:clamp(38px,5.2vw,76px);line-height:1.1}.statement-columns{row-gap:20px;margin-top:65px}.statement-columns p{margin:0}.catalogue{grid-template-columns:38% 1fr;gap:8vw;align-items:start}.catalogue-cover{position:sticky;top:110px}.catalogue-copy h2{font-size:clamp(36px,4vw,62px);line-height:1.05}.catalogue-copy>p:not(.eyebrow){font-size:12px;max-width:none;line-height:1.85}.catalogue-cover span{font-size:clamp(40px,5vw,72px);line-height:.95}.catalogue-cover small{font-size:9px}.about-image{position:sticky;top:100px}.portrait-pending{aspect-ratio:4/5;background:#e4c6d0;display:flex;flex-direction:column;align-items:center;justify-content:center}.portrait-pending>span{font:400 100px/1 var(--serif);color:#a05e77}.portrait-pending p{margin-top:25px;font-size:10px;color:#835e6e}.about-copy h2{margin:35px 0;font-size:clamp(40px,5vw,70px)}.about-copy>p:not(.eyebrow){max-width:550px;font-size:13px;line-height:1.85;color:#59564f}.footer-main h3{font:400 clamp(44px,6vw,92px)/1 var(--serif);letter-spacing:-.035em;margin:0}.contact-pending{font-size:10px;color:#4f5940}.footer-bottom{font-size:9px}dialog{border:0;background:var(--paper);color:var(--ink);padding:55px 30px 30px;width:min(1050px,92vw);max-height:90svh}dialog[open]{display:grid;grid-template-columns:1fr 1fr;gap:35px}dialog::backdrop{background:#141512bb;backdrop-filter:blur(5px)}.dialog-close{position:absolute;right:20px;top:14px;padding:5px;border:0;background:none;font-size:11px}#dialog-art{align-self:start;position:sticky;top:0}#dialog-art img{max-height:70svh;object-fit:contain}#dialog-art .photo-pending{min-height:380px}.dialog-copy h2{font:400 42px/1.05 var(--serif);margin:22px 0}.dialog-copy .artwork-description{font-size:12px}body.dialog-open{overflow:hidden}
+@media(min-width:761px) and (max-width:1050px){.nav{gap:18px}.nav a{font-size:10px}.work-meta{display:block}.work-meta p{margin-top:8px}.hero-title h1{font-size:13vw}.hero-link{bottom:35px}.hero-title p{margin-bottom:35px}}
+@media(max-width:760px){.hero{min-height:95svh;padding-bottom:45px}.hero-title h1{font-size:23vw;line-height:.9}.hero-title p{margin:28px 0 0;font-size:25px}.hero-kicker{font-size:9px;letter-spacing:.1em}.nav a{font-size:36px}.menu-button{padding:10px}.intro-copy>p:first-child{font-size:38px}.intro-secondary{margin:30px 0;font-size:13px}.work-item:nth-child(4),.work-item:nth-child(5){margin:0 0 65px}.work-image{max-height:none}.photo-pending{min-height:0}.artwork-description{font-size:13px}.full-statement blockquote{font-size:40px}.statement-columns{margin-top:0;font-size:13px}.catalogue{grid-template-columns:1fr;gap:60px}.catalogue-cover,.about-image,#dialog-art{position:static}.catalogue-cover{width:80%}.catalogue-copy h2{font-size:43px}.catalogue-copy>p:not(.eyebrow){font-size:13px}.about-copy>p:not(.eyebrow){font-size:13px}.footer-main{padding:60px 0 70px}.footer-main h3{font-size:46px}.contact-pending{margin-top:35px}.footer-bottom{font-size:8px}.footer-bottom div{gap:12px}dialog[open]{grid-template-columns:1fr;padding:50px 20px 25px;gap:25px}#dialog-art img{max-height:50svh}#dialog-art .photo-pending{min-height:250px}}
+
+/* Simple enquiry form beside the existing contact heading. */
+.footer-main{display:grid;grid-template-columns:1.25fr 1fr;align-items:start;gap:6vw;padding:70px 0 90px}.contact-copy{min-width:0}.contact-copy .contact-details{margin-top:32px;gap:12px;font-size:12px}.contact-form{display:flex;flex-direction:column;gap:20px;min-width:0;padding-top:5px}.contact-form label{display:flex;flex-direction:column;gap:8px;font-size:11px}.contact-form label>span{font-size:9px;display:contents}.contact-form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}.contact-form input,.contact-form textarea{width:100%;min-width:0;border:1px solid #65714c;background:#ffffff26;color:var(--ink);border-radius:0;padding:13px;font:400 14px/1.5 'DM Mono',monospace}.contact-form textarea{resize:vertical;min-height:155px}.contact-form input:focus-visible,.contact-form textarea:focus-visible{outline:2px solid var(--ink);outline-offset:3px}.contact-form-bottom{display:flex;align-items:center;justify-content:space-between;gap:18px}.contact-form-bottom p{font-size:9px;line-height:1.7;margin:0;max-width:220px}.contact-form button{background:var(--ink);color:var(--paper);border:1px solid var(--ink);padding:13px 28px;font-size:11px;white-space:nowrap}.contact-form button:hover{background:#3a4430}.contact-form-status{font-size:10px;line-height:1.7;margin:0}.contact-form-status:empty{display:none}@media(max-width:1050px){.footer-main{gap:4vw}.footer-main h3{font-size:clamp(44px,6vw,70px)}.contact-form-row{grid-template-columns:1fr}}@media(max-width:760px){.footer-main{grid-template-columns:1fr;gap:45px;padding:55px 0 65px}.footer-main h3{font-size:46px;margin-bottom:0}.contact-copy .contact-details{margin-top:25px}.contact-form-row{grid-template-columns:1fr 1fr}.contact-form input,.contact-form textarea{font-size:16px}}@media(max-width:420px){.contact-form-row{grid-template-columns:1fr}.contact-form-bottom{align-items:flex-start;flex-direction:column}.contact-form button{width:100%}}
+
+.contact-social{margin-top:30px}.contact-social h4{margin:0 0 17px;font-weight:500}.social-profiles{display:flex;flex-wrap:wrap;gap:22px 32px}.social-profile{display:flex;align-items:center;gap:11px;font-size:11px;line-height:1.6}.social-profile svg{width:23px;height:23px;flex-shrink:0}.social-profile>span{display:flex;flex-direction:column}.social-platform{font-size:9px;color:#4f5940;margin-bottom:2px}
+
+/* Make navigation and each section's heading easier to read. */
+.nav a{font-size:15px;letter-spacing:.08em}
+#artworks .section-heading>h2,
+#statement>h2,
+#catalogue .catalogue-copy>.eyebrow,
+#about .about-copy>.eyebrow,
+#cv .section-heading>h2,
+#contact>h2{font-size:clamp(20px,2vw,28px);line-height:1.3;letter-spacing:.08em;font-weight:500}
+@media(min-width:761px) and (max-width:1050px){.nav{gap:18px}.nav a{font-size:13px}}
+@media(max-width:760px){.nav a{font-size:36px;letter-spacing:0}}
+
+/* Justify long-form copy while keeping short labels and form text readable. */
+.intro-copy>p,
+.artwork-description>p:not(.medium):not(.material-note),
+.statement-columns>p,
+.catalogue-copy>p:not(.eyebrow),
+.about-copy>p:not(.eyebrow),
+.cv-profile>p:not(.eyebrow),
+.cv-entry p{ text-align:justify; text-justify:inter-word; }
+
+/* Four earlier works, with space for original images and captions. */
+#archive .section-heading>h2{font-size:clamp(20px,2vw,28px);line-height:1.3;letter-spacing:.08em;font-weight:500}.archive-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px 4vw}.archive-card{margin:0;min-width:0}.archive-image{aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#e4d4cf;border:1px solid #1c1b1826;overflow:hidden}.archive-card:nth-child(2) .archive-image{background:#d9d4c9}.archive-card:nth-child(3) .archive-image{background:#cbd0bd}.archive-card:nth-child(4) .archive-image{background:#e1cbd5}.archive-image>span{font:400 85px/1 var(--serif);color:#71665f}.archive-image>p{font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#655d57;margin:16px 0 0}.archive-image img{width:100%;height:100%;object-fit:contain}.archive-card figcaption{padding-top:17px}.archive-card h3{font:400 clamp(26px,2.8vw,38px)/1.1 var(--serif);margin:0 0 8px}.archive-card figcaption p{font-size:10px;color:#655d57;margin:0;line-height:1.6}@media(max-width:760px){.archive-grid{gap:35px 20px}.archive-card h3{font-size:25px}.archive-image>span{font-size:60px}.archive-image>p{font-size:8px;letter-spacing:0;text-align:center;padding:0 10px}.archive-card figcaption p{font-size:9px}}@media(max-width:480px){.archive-grid{grid-template-columns:1fr;gap:40px}.archive-image>span{font-size:80px}}
+
+/* Carry the portfolio palette through biography and CV. */
+#about{background:#ead8d6}
+#about .portrait-pending{background:#ddbec6}
+#cv{background:#dce2d0;border-top-color:#b2bba3}
+#cv .section-heading,#cv .cv-group{border-bottom-color:#b2bba3}
+
+/* Slightly reduce the artist statement's opening sentence. */
+.full-statement blockquote{font-size:clamp(35px,4.6vw,68px)}
+@media(max-width:760px){.full-statement blockquote{font-size:36px}}
+
+/* Pink hover and keyboard focus for the top navigation. */
+.site-header .nav a{transition:color .2s,opacity .2s}
+.site-header .nav a:hover,.site-header .nav a:focus-visible{color:var(--acid);opacity:1}
+
+/* Pink backdrop for the exhibition title and tagline on the landing image. */
+.hero-title>p{display:table;background:var(--blush);color:var(--ink);padding:14px 20px;line-height:1.35}
+
+.hero-kicker{background:var(--blush);color:var(--ink);padding:9px 14px}
+
+/* Lower the artist name and align the pink text boxes to the same left edge. */
+.hero-title{transform:translateY(20px)}
+.hero-title>p{margin-left:0}
+
+/* Place the artist descriptor directly beneath the name. */
+.hero-title>.hero-kicker{position:static;display:table;margin:24px 0 0;padding:9px 14px;font:500 11px/1.5 'DM Mono',monospace;letter-spacing:.14em;text-transform:uppercase;background:var(--blush);color:var(--ink)}
+.hero-title>.hero-kicker+p{margin-top:12px}
+@media(max-width:760px){.hero-title>.hero-kicker{font-size:9px;letter-spacing:.1em;margin-top:20px}}
+
+/* Original artwork photographs and grouped detail views. */
+.work-thumbnails{display:flex;gap:10px;margin-top:12px}.work-thumbnails button{padding:0;border:1px solid #a59b91;background:#ded8cf;width:76px;height:82px;overflow:hidden}.work-thumbnails img{width:100%;height:100%;object-fit:cover}.work-thumbnails button:hover{border-color:var(--acid)}.dialog-gallery{align-self:start;position:sticky;top:0}.dialog-gallery #dialog-art{position:static}.dialog-navigation{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:14px;font-size:11px}.dialog-navigation[hidden]{display:none}.dialog-navigation button{border:1px solid var(--line);background:transparent;min-width:44px;min-height:40px;font-size:20px}.dialog-navigation button:hover{color:var(--acid);border-color:var(--acid)}#photo-count{min-width:45px;text-align:center}#about .about-image img{height:auto;aspect-ratio:auto;filter:none}.archive-image{position:relative}.archive-image img{object-fit:contain;max-height:100%}@media(max-width:760px){.dialog-gallery{position:static}.work-thumbnails button{width:70px;height:76px}}
+
+/* Uniform artwork cards with matching image frames and aligned captions. */
+#artworks .work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:65px 4vw;align-items:start}
+#artworks .work-item:nth-child(n){grid-column:auto;width:100%;margin:0;min-width:0}
+#artworks .work-item .work-image{width:100%;aspect-ratio:1/1;position:relative}
+#artworks .work-item .work-image>img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+#artworks .work-thumbnails{height:82px;margin-top:12px}
+#artworks .work-meta{display:flex;justify-content:space-between;align-items:baseline;min-height:85px;padding-top:20px;gap:15px}
+#artworks .work-meta h2{font-size:clamp(26px,2.8vw,38px)}
+#artworks .work-meta>p{margin:0;flex-shrink:0}
+#artworks .artwork-description{margin-top:0;max-width:none}
+@media(max-width:760px){#artworks .work-grid{grid-template-columns:1fr;gap:50px}#artworks .work-thumbnails{height:76px}#artworks .work-thumbnails-empty{display:none}#artworks .work-meta{min-height:0;padding-bottom:15px}#artworks .work-meta h2{font-size:30px}}
+
+/* Single-photo artworks need no reserved thumbnail space. */
+#artworks .work-thumbnails-empty{display:none}
+
+/* Match the CV dividers with a line above Education. */
+#cv .cv-list>.cv-group:first-child{border-top:1px solid #b2bba3}
+
+/* Archive images open in the same larger viewer as selected artworks. */
+.archive-view{width:100%;padding:0;cursor:pointer;color:var(--ink);text-align:left}.archive-view>.archive-expand{position:absolute;top:12px;right:12px;display:grid;place-items:center;width:30px;height:30px;font:400 17px/1 'DM Mono',monospace;background:var(--paper);border-radius:50%;color:var(--ink);transition:background .2s}.archive-view:hover>.archive-expand,.archive-view:focus-visible>.archive-expand{background:var(--acid)}
+
+/* Archive captions and full descriptions in the image viewer. */
+.archive-description{margin-top:14px}.archive-card .archive-description p{margin:0 0 12px;line-height:1.8}.archive-card .archive-description .archive-credit{font-size:11px}.archive-card .archive-description .archive-medium{font-size:11px}.archive-description .material-note{font-size:10px;font-style:italic;color:var(--muted)}.archive-card .archive-description .archive-prose{font-size:13px;color:#59564f;text-align:justify;text-justify:inter-word}.dialog-copy .archive-description p{font-size:12px;line-height:1.85}.dialog-copy .archive-description .archive-prose{text-align:justify;text-justify:inter-word}
+
+/* Direct contact links while the hosted enquiry form is paused. */
+.contact-direct .footer-main{grid-template-columns:1fr}

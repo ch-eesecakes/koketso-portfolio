@@ -1,0 +1,87 @@
+{
+  "01.heic": {
+    "src": "assets/photos/01-0fb558658c.jpg",
+    "width": 1429,
+    "height": 2000
+  },
+  "01_2.HEIC": {
+    "src": "assets/photos/01-2-f0d847d9d6.jpg",
+    "width": 1500,
+    "height": 2000
+  },
+  "01_3heic.heic": {
+    "src": "assets/photos/01-3heic-80a58a2686.jpg",
+    "width": 1500,
+    "height": 2000
+  },
+  "03_1.heic": {
+    "src": "assets/photos/03-1-e60663394e.jpg",
+    "width": 1160,
+    "height": 2000
+  },
+  "03_2.heic": {
+    "src": "assets/photos/03-2-4c57c5d1a2.jpg",
+    "width": 1847,
+    "height": 2000
+  },
+  "05.heic": {
+    "src": "assets/photos/05-3c21a6c7a9.jpg",
+    "width": 2000,
+    "height": 1914
+  },
+  "06.heic": {
+    "src": "assets/photos/06-a6fef7bc6d.jpg",
+    "width": 1500,
+    "height": 2000
+  },
+  "2_1.heic": {
+    "src": "assets/photos/2-1-4bcb7ad370.jpg",
+    "width": 1500,
+    "height": 2000
+  },
+  "2_2.heic": {
+    "src": "assets/photos/2-2-5c587f9119.jpg",
+    "width": 1500,
+    "height": 2000
+  },
+  "Archive 1.HEIC": {
+    "src": "assets/photos/archive-1-7d2223b228.jpg",
+    "width": 1500,
+    "height": 2000
+  },
+  "Archive 2.HEIC": {
+    "src": "assets/photos/archive-2-b1bbe4cd1b.jpg",
+    "width": 994,
+    "height": 2000
+  },
+  "Archive 3.heic": {
+    "src": "assets/photos/archive-3-8e25b684c5.jpg",
+    "width": 2000,
+    "height": 1430
+  },
+  "Archive 4.jpg": {
+    "src": "assets/photos/archive-4-4f75095820.jpg",
+    "width": 2000,
+    "height": 1468
+  },
+  "Archive 5.jpg": {
+    "src": "assets/photos/archive-5-cac5299b0b.jpg",
+    "width": 1392,
+    "height": 2000
+  },
+  "Archive 6.HEIC": {
+    "src": "assets/photos/archive-6-09c3f3c22a.jpg",
+    "width": 1500,
+    "height": 2000
+  },
+  "Artist Bio.JPG": {
+    "src": "assets/photos/artist-bio-1d433b5690.jpg",
+    "width": 1595,
+    "height": 2000
+  },
+  "IMG_7632.HEIC": {
+    "src": "assets/photos/img-7632-fdc6a44740.jpg",
+    "width": 1500,
+    "height": 2000
+  }
+}
