@@ -91,7 +91,7 @@
 </section>
 
 </main>
-<footer class="footer section-pad contact-direct" id="contact">
+<footer class="footer section-pad" id="contact">
   <h2 class="eyebrow">Contact</h2>
   <div class="footer-main">
     <div class="contact-copy">
@@ -105,6 +105,19 @@
         </div>
       </div>
     </div>
+    <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="post" aria-label="Enquiry form" aria-describedby="contact-form-note">
+      <!-- Add the public Web3Forms access key for Koketso's inbox here. -->
+      <input type="hidden" name="access_key" value="1cb1a8c2-bbad-407f-adbf-96840b0be30d">
+      <input type="hidden" name="subject" value="New portfolio enquiry">
+      <input type="hidden" name="from_name" value="Koketso Masemola Portfolio">
+      <input type="checkbox" name="botcheck" hidden tabindex="-1" aria-hidden="true">
+      <label for="contact-name">Name<input id="contact-name" name="name" autocomplete="name" maxlength="150" required></label>
+      <div class="contact-form-row"><label for="contact-email">Email address<input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required></label><label for="contact-phone">Phone number <span>(optional)</span><input id="contact-phone" name="phone" type="tel" autocomplete="tel" maxlength="40"></label></div>
+      <label for="contact-enquiry">Enquiry<textarea id="contact-enquiry" name="message" rows="5" maxlength="3000" required></textarea></label>
+      <div class="contact-form-bottom"><p id="contact-form-note">Send an enquiry directly from this website.</p><button type="submit">Submit ↗</button></div>
+      <noscript>Please email Koketso directly using the address beside this form.</noscript>
+      <p class="contact-form-status" id="contact-form-status" role="status"></p>
+    </form>
   </div>
   <div class="footer-bottom"><p>© <span id="year">2026</span> Koketso Masemola</p><div><span>Becoming, in Layers</span></div><a href="#home">Back to top ↑</a></div>
 </footer>

@@ -1,8 +1,6 @@
 """Render the supplied portfolio content in the user's reference template."""
 import hashlib
 import json
-import re
-import sys
 from html import escape
 from pathlib import Path
 import shutil
@@ -61,9 +59,6 @@ for i in work_order:
     </article>''')
 
 contact_content = (root / 'contact.html').read_text()
-if '--static-hosting' in sys.argv:
-    contact_content = re.sub(r'\s*<form\b.*?</form>', '', contact_content, flags=re.S)
-    contact_content = contact_content.replace('class="footer section-pad"', 'class="footer section-pad contact-direct"', 1)
 
 first_intro, rest_intro = data['intro'].split('. ', 1)
 html = f'''<!doctype html>
@@ -87,4 +82,4 @@ html = f'''<!doctype html>
 <dialog id="artwork-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Close artwork details">Close ×</button><div class="dialog-gallery"><div id="dialog-art"></div><div class="dialog-navigation" hidden><button type="button" id="previous-photo" aria-label="Previous artwork photograph">←</button><span id="photo-count" role="status"></span><button type="button" id="next-photo" aria-label="Next artwork photograph">→</button></div></div><div class="dialog-copy"><p class="eyebrow">Becoming, in Layers / 2026</p><h2 id="dialog-title"></h2><div id="dialog-description"></div></div></dialog>
 </body></html>'''
 (dist / 'index.html').write_text(html)
-print('Built portfolio with direct contact links.' if '--static-hosting' in sys.argv else 'Built portfolio with all content, galleries, CV and contact form.')
+print('Built portfolio with all content, galleries, CV and contact form.')
