@@ -87,6 +87,3 @@ html{scroll-padding-top:85px}body{line-height:1.6}button,a{-webkit-tap-highlight
 
 /* Archive captions and full descriptions in the image viewer. */
 .archive-description{margin-top:14px}.archive-card .archive-description p{margin:0 0 12px;line-height:1.8}.archive-card .archive-description .archive-credit{font-size:11px}.archive-card .archive-description .archive-medium{font-size:11px}.archive-description .material-note{font-size:10px;font-style:italic;color:var(--muted)}.archive-card .archive-description .archive-prose{font-size:13px;color:#59564f;text-align:justify;text-justify:inter-word}.dialog-copy .archive-description p{font-size:12px;line-height:1.85}.dialog-copy .archive-description .archive-prose{text-align:justify;text-justify:inter-word}
-
-/* Direct contact links while the hosted enquiry form is paused. */
-.contact-direct .footer-main{grid-template-columns:1fr}

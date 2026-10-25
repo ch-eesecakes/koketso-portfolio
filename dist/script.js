@@ -73,22 +73,24 @@ dialog.addEventListener('click', event => {
 document.querySelector('#year').textContent = new Date().getFullYear();
 
 const contactForm = document.querySelector('#contact-form');
-let pendingEnquiry = null;
+if (contactForm?.elements.namedItem('access_key').value.trim()) {
+  document.querySelector('#contact-form-note').textContent = 'Send an enquiry directly from this website.';
+}
 contactForm?.addEventListener('submit', async event => {
   event.preventDefault();
   if (contactForm.getAttribute('aria-busy') === 'true') return;
   const name = contactForm.elements.namedItem('name');
-  const enquiry = contactForm.elements.namedItem('enquiry');
+  const enquiry = contactForm.elements.namedItem('message');
   name.value = name.value.trim();
   enquiry.value = enquiry.value.trim();
   if (!contactForm.reportValidity()) return;
   const status = document.querySelector('#contact-form-status');
+  if (!contactForm.elements.namedItem('access_key').value.trim()) {
+    status.textContent = 'Online enquiries are not available yet. Please email or call Koketso using the details beside this form.';
+    return;
+  }
   const button = contactForm.querySelector('button[type="submit"]');
   const values = Object.fromEntries(new FormData(contactForm));
-  const signature = JSON.stringify(values);
-  if (pendingEnquiry?.signature !== signature) {
-    pendingEnquiry = { signature, requestId: crypto.randomUUID() };
-  }
   contactForm.setAttribute('aria-busy', 'true');
   button.disabled = true;
   button.textContent = 'Sending…';
@@ -97,19 +99,18 @@ contactForm?.addEventListener('submit', async event => {
     const response = await fetch(contactForm.action, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify({ ...values, requestId: pendingEnquiry.requestId }),
+      body: JSON.stringify(values),
       signal: AbortSignal.timeout(18000),
     });
     if (!response.headers.get('content-type')?.includes('application/json')) {
       throw new Error('The enquiry form is unavailable here. Please contact Koketso using the email address or phone number beside it.');
     }
     const result = await response.json();
-    if (!response.ok || result.ok !== true) {
-      throw new Error(result.error || 'Your enquiry could not be sent. Please try again or contact Koketso directly.');
+    if (!response.ok || result.success !== true) {
+      throw new Error('Your enquiry could not be sent. Please try again or contact Koketso directly.');
     }
-    status.textContent = result.message;
+    status.textContent = 'Thank you. Your enquiry has been sent to Koketso.';
     contactForm.reset();
-    pendingEnquiry = null;
   } catch (error) {
     status.textContent = error.name === 'TimeoutError' || error.name === 'TypeError'
       ? 'We could not confirm your submission. Your message is still here; please try again or contact Koketso directly.'
